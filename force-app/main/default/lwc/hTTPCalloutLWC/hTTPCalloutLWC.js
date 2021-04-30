@@ -59,22 +59,3 @@ export default class HTTPCalloutLWC extends LightningElement {
     }
 
 }
-
-/*
-
-exchangeData:{
-:"INR",
-:"Indian Rupee",
-"3. To_Currency Code":"EUR",
-:"Euro",
-:"0.01122900",
-:"2021-04-30 17:27:07",
-"7. Time Zone":"UTC",
-"8. Bid Price":"0.01122870",
-"9. Ask Price":"0.01122950"}
-
-// console.log('Data: '+ data[1]);
-// this.exchangeRateData.From_Currency_Name = data['2. From_Currency Name']
-// console.log(this.exchangeRateData);
-
-*/
