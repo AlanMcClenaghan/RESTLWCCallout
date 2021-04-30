@@ -1,5 +1,5 @@
 <template>
-    <lightning-card title="Realtime Currency Exchange Rate" icon="standard:currency">
+    <lightning-card title="Realtime Currency Exchange Rate" icon-name="standard:currency">
         <div class="slds-m-around_medium">
             <lightning-layout multiple-rows="true" vertical-align="end">
                 <lightning-layout-item size="12" small-device-size="2" padding="around-small">
@@ -7,7 +7,7 @@
                         <div class="slds-form-element__control">
                             <lightning-combobox 
                                 title="Select Currency" 
-                                label="From Base Currency" 
+                                label="Base Currency" 
                                 value={fromCurrencyValue}
                                 placeholder="--Select--"
                                 options={fromCurrencyOptions}
@@ -29,6 +29,14 @@
                             </lightning-combobox>
                         </div>
                     </div>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="2" padding="around-small">
+                    <lightning-button
+                        title="Currency Conversion"
+                        label="Conversion Rate"
+                        variant="brand"
+                        onclick={handleCurrencyConversion}>
+                    </lightning-button>
                 </lightning-layout-item>
             </lightning-layout>
         </div>
