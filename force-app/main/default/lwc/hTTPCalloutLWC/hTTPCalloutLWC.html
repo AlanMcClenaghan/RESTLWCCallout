@@ -40,5 +40,20 @@
                 </lightning-layout-item>
             </lightning-layout>
         </div>
+        <template if:true={displayData}>
+            <div class="slds-p-around_medium">
+                <h1 style="font-size: 20px;">Exchange Rate Information from <strong>{fromCurrencyValue}</strong> to <strong>{toCurrencyValue}</strong></h1>
+                <dl class="slds-list_horizontal slds-wrap">
+                    <dt class="slds-item_label sld-truncate" title="From Currency Name">From Currency Name: </dt>
+                    <dd class="slds-item_detail sld-truncate"><strong>{displayData.From_Currency_Name}</strong></dd>
+                    <dt class="slds-item_label sld-truncate" title="To Currency Name">To Currency Name: </dt>
+                    <dd class="slds-item_detail sld-truncate"><strong>{displayData.To_Currency_Name}</strong> </dd>
+                    <dt class="slds-item_label sld-truncate" title="Last Refreshed">Last Refreshed: </dt>
+                    <dd class="slds-item_detail sld-truncate"><strong>{displayData.Last_Refreshed}</strong> </dd>
+                    <dt class="slds-item_label sld-truncate" title="Exchange Rate">Exchange Rate: </dt>
+                    <dd class="slds-item_detail sld-truncate"><strong>{displayData.Exchange_rate}</strong> </dd>
+                </dl>
+            </div>
+        </template>
     </lightning-card>
 </template>
